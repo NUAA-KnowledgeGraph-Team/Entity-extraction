@@ -1,9 +1,14 @@
 # 实体识别方案
 
-使用python调用开源的结巴分词库对语句进行分词。将我们的数据库作为训练集，对分词得到的所有词汇进行贝叶斯概率估计，返回可能的与主题相关的实体。
+###编译环境:
+1. Clone项目
+2. 安装有SPARQL
 
-C++调用Python，确保计算机内有python.h文件。
-准备将文件封装为一个.h文件，
+直接调用JIEBA分词，我进行封装之后提供一个entityExtension.h文件，提供实体识别的一些函数
 
 定义原型：
+```
 vector<wstring> Entity-extraction(DataBase &,wstring);
+```
+
+SPARQL有待学习，目前原型的DataBase类型暂未确定。
